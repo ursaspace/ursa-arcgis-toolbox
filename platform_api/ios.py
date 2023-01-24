@@ -131,3 +131,16 @@ def build_tasking_order(email, aois, schedule, params):
             "collectionParameters": params
         }
     }
+
+
+def cancel_order(id: str):
+    headers = {
+        "Authorization": "Bearer {}".format(auth_token.token)
+    }
+
+    cancel_url = "{}/api/ios/order/{}/cancel".format(config.baseUrl, id)
+
+    return requests.post(
+        url=cancel_url,
+        headers=headers,
+    )

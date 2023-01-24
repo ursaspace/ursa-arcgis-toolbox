@@ -52,10 +52,10 @@ class Tasking(object):
 
     def handle_order_success(self, resp, messages):
         resp_json = resp.json()
-        if 'purchaseReference' in resp_json:
+        if resp_json['statusHistory'][-1]['state'] == 'in-progress':
             self.handle_invoice_customer(resp_json['id'], messages)
         else:
-            self.handle_stripe_customer(messages)
+            self.handle_stripe_customer(resp_json['id'], messages)
 
     def handle_order_failure(self, resp, messages):
         messages.addErrorMessage({
@@ -70,7 +70,8 @@ class Tasking(object):
             'You will receive an email confirmation with full order details shortly.'
         )
 
-    def handle_stripe_customer(self, messages):
+    def handle_stripe_customer(self, order_id, messages):
+        ios.cancel_order(order_id)
         messages.addErrorMessage(
             'Must be an invoice customer to submit orders. Please contact support@ursaspace.com.'
         )
@@ -82,7 +83,7 @@ class Tasking(object):
 
     def aoi_parameter(self):
         param = arcpy.Parameter(
-            displayName="AOI",
+            displayName="Area Of Interest",
             name="aoi",
             datatype="GPFeatureRecordSetLayer",
             parameterType="Required",
@@ -171,7 +172,7 @@ class Tasking(object):
 
     def preferred_vendors_parameter(self):
         param = arcpy.Parameter(
-            displayName="Preferred Vendors (Optional)",
+            displayName="Preferred Vendors",
             name="preferredVendors",
             datatype="GPString",
             parameterType="Optional",

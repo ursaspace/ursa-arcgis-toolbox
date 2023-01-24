@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en">
+    <Esri>
+        <CreaDate>20230127</CreaDate>
+        <CreaTime>23112300</CreaTime>
+        <ArcGISFormat>1.0</ArcGISFormat>
+        <SyncOnce>TRUE</SyncOnce>
+        <ModDate>20230128</ModDate>
+        <ModTime>003246</ModTime>
+    </Esri>
+    <toolbox name="UrsaPlatform" alias="UrsaPlatformToolbox">
+        <arcToolboxHelpPath>c:\program files\arcgis\pro\Resources\Help\gp</arcToolboxHelpPath>
+        <toolsets />
+    </toolbox>
+    <dataIdInfo>
+        <idCitation>
+            <resTitle>UrsaPlatform</resTitle>
+        </idCitation>
+    </dataIdInfo>
+    <distInfo>
+        <distributor>
+            <distorFormat>
+                <formatName>ArcToolbox Toolbox</formatName>
+            </distorFormat>
+        </distributor>
+    </distInfo>
+</metadata>

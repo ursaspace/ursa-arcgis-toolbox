@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<metadata xml:lang="en">
+    <Esri>
+        <CreaDate>20230128</CreaDate>
+        <CreaTime>14493700</CreaTime>
+        <ArcGISFormat>1.0</ArcGISFormat>
+        <SyncOnce>TRUE</SyncOnce>
+        <ModDate>20230130</ModDate>
+        <ModTime>12514500</ModTime>
+        <scaleRange>
+            <minScale>150000000</minScale>
+            <maxScale>5000</maxScale>
+        </scaleRange>
+        <ArcGISProfile>ItemDescription</ArcGISProfile>
+    </Esri>
+    <tool name="Tasking" displayname="Tasking" toolboxalias="UrsaPlatformToolbox" xmlns="">
+        <arcToolboxHelpPath>c:\program files\arcgis\pro\Resources\Help\gp</arcToolboxHelpPath>
+        <parameters>
+            <param name="aoi" displayname="Area Of Interest" type="Required" direction="Input"
+                datatype="Feature Set" expression="aoi">
+                <dialogReference>&lt;DIV
+                    STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Point Geometries
+                    Only.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+            </param>
+            <param name="buffer" displayname="Buffer (km)" type="Required" direction="Input"
+                datatype="Double" expression="buffer" />
+            <param name="startDate" displayname="Start Date" type="Required" direction="Input"
+                datatype="Date" expression="startDate">
+                <dialogReference>&lt;DIV STYLE="text-align:Left;"&gt;&lt;P&gt;&lt;SPAN&gt;Must be 48
+                    hours from present day/time.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;</dialogReference>
+            </param>
+            <param name="endDate" displayname="End Date" type="Required" direction="Input"
+                datatype="Date" expression="endDate">
+                <dialogReference>&lt;DIV
+                    STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Cannot precede start
+                    date.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+            </param>
+            <param name="imagingMode" displayname="Imaging Mode" type="Required" direction="Input"
+                datatype="String" expression="SPOTLIGHT | STRIPMAP">
+                <dialogReference>&lt;DIV
+                    STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;Spotlight: ~0.5m -
+                    1.5m Resolution&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN&gt;Stripmap: ~0.5m -
+                    3.5m Resolution&lt;/SPAN&gt;&lt;/P&gt;&lt;P&gt;&lt;SPAN
+                    /&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+            </param>
+            <param name="preferredVendors" displayname="Preferred Vendors (Optional)"
+                type="Optional" direction="Input" datatype="Multiple Value"
+                expression="{CAPELLA | ICEYE}">
+                <dialogReference>&lt;DIV
+                    STYLE="text-align:Left;"&gt;&lt;DIV&gt;&lt;DIV&gt;&lt;P&gt;&lt;SPAN&gt;If no
+                    preferred vendor provided, Ursa will collect the best available image across all
+                    listed vendors.&lt;/SPAN&gt;&lt;/P&gt;&lt;/DIV&gt;&lt;/DIV&gt;&lt;/DIV&gt;</dialogReference>
+            </param>
+        </parameters>
+    </tool>
+    <dataIdInfo>
+        <idCitation>
+            <resTitle>Tasking</resTitle>
+        </idCitation>
+    </dataIdInfo>
+    <distInfo>
+        <distributor>
+            <distorFormat>
+                <formatName>ArcToolbox Tool</formatName>
+            </distorFormat>
+        </distributor>
+    </distInfo>
+    <mdHrLv>
+        <ScopeCd value="005" />
+    </mdHrLv>
+    <mdDateSt Sync="TRUE">20230130</mdDateSt>
+</metadata>
