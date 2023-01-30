@@ -6,9 +6,12 @@ A python toolbox for working with the Ursa Platform APIs in ArcGIS Pro.
 
 ## Requirements
 
-- ArcGIS Pro Installation
-- Ursa Platform Credentials
-- Admin privileges if ArcGIS Pro is installed at system level
+- ArcGIS Pro Installation & License.
+- Ursa Platform Credentials set to Invoice Only customer type.
+  - New customers are required to submit this [form](https://share.hsforms.com/1OpZURWHoRfCRmRwD_3CHTg2h66d) to begin our verification process
+  - Existing customers can download from GitHub & get started!
+  - ** All users must be "Invoice Only" customer type, if you are unsure what you are set to contact [support@ursaspace.com](mailto:support@ursaspace.com).
+- Admin privileges if ArcGIS Pro is installed at system level.
   - If you do not have Admin access, a clone of the default ArcGIS Pro Python Environment must be created in a directory that does not require Admin access. See [ESRI Documentation](https://pro.arcgis.com/en/pro-app/latest/arcpy/get-started/clone-an-environment.htm) for more details.
 - This python toolbox only uses packages available in the default python environment shipped with ArcGIS Pro.
 
@@ -28,7 +31,6 @@ A python toolbox for working with the Ursa Platform APIs in ArcGIS Pro.
 ## Usage
 
 - User must provide Ursa Platform credentials using the "Login" tool in order to use the Ursa Platform APIs.
-
 - Tools can be opened by double-clicking the item in the toolbox.
 
 ## Pricing
