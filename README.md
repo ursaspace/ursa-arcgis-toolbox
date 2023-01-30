@@ -18,25 +18,37 @@ A python toolbox for working with the Ursa Platform APIs in ArcGIS Pro.
 ## Downloading from GitHub
 
 - "Download ZIP" - Find and select the green "< > Code" button, then select "Download ZIP"
+<img width="1190" alt="download-zip" src="https://user-images.githubusercontent.com/123033437/215618368-4f7bdb8c-8e4a-4069-9794-edc4071e5b00.png">
 
-<img width="1800" alt="Screenshot 2023-01-24 at 15 27 11" src="https://user-images.githubusercontent.com/123033437/214444397-61d111c0-f6b6-4cbd-bbea-49637efb1a03.png">
 
 ## Installation
 
 1. In an ArcGIS Pro Document, open "Catalog"
 2. In Catalog, right-click "Toolboxes" and select "Add Toolbox"
+<img width="323" alt="Screenshot 2023-01-30 at 15 16 01" src="https://user-images.githubusercontent.com/123033437/215618434-a2fedc98-8153-42b7-b465-d901af682989.png">
 3. Navigate to "UrsaPlatform.pyt", click "Ok"
 4. Open the added toolbox. Listed are the available tools.
+<img width="323" alt="Screenshot 2023-01-30 at 15 16 21" src="https://user-images.githubusercontent.com/123033437/215618493-349f235f-2d0a-47cb-877e-e78138ab46e4.png">
 
 ## Usage
+Tools can be opened by double-clicking the item in the toolbox.
 
+### Login
 - User must provide Ursa Platform credentials using the "Login" tool in order to use the Ursa Platform APIs.
-- Tools can be opened by double-clicking the item in the toolbox.
+### Tasking
+- Area of interest only supports point geometries
+- Start Date must be 48 hours from present day/time, _if you have the need for Emergency tasking please contact us_
+- End Date cannot precede start date
+- Determine Imaging Mode
+- Determine Preferred Vendor(s), _future iterations will include additional vendors_.
 
-## Pricing
+## Pricing, Terms & Conditions
 
 [Ursa Virtual Constellation Pricing](https://4160389.fs1.hubspotusercontent-na1.net/hubfs/4160389/Esri%20Links/Esri-Ursa-Virtual-Constellation-Pricing-Sheet-v20230130.pdf)
-- Currently Capella & ICEYE available, future iterations will include additional vendors.
+- Currently Capella & ICEYE available, _future iterations will include additional vendors_.
+
+[Terms & Conditions](https://ursaspace.com/terms/)
+- Includes End User License Agreements by Vendor Partner
 
 ## Ordering
 
@@ -44,7 +56,7 @@ Orders will be delivered via email with a link to download the relevant orders c
 
 ## Invoicing
 
-Orders will have relevant invoices sent via e-mail as soon as possible after a user's submission. Invoices are to be paid withtin 30 days after receiving the invoice from Ursa.
+Relevant invoices will be sent via e-mail as soon as possible after a user's order submission. Invoices are to be paid by the user withtin 30 days after receiving the invoice from Ursa.
 
 ## Tests
 
