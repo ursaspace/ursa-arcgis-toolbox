@@ -33,11 +33,16 @@ A python toolbox for working with the Ursa Platform APIs in ArcGIS Pro.
 
 ## Pricing
 
-[TODO]
+[Ursa Virtual Constellation Pricing](https://4160389.fs1.hubspotusercontent-na1.net/hubfs/4160389/Esri%20Links/Esri-Ursa-Virtual-Constellation-Pricing-Sheet-v20230130.pdf)
+- Currently Capella & ICEYE available, future iterations will include additional vendors.
 
 ## Ordering
 
-[TODO]
+Orders will be delivered via email with a link to download the relevant submission
+
+## Invoicing
+
+Orders will have relevant invoices sent via e-mail as soon as possible after a user's submission. Invoices are to be paid withtin 30 days after receiving the invoice from Ursa.
 
 ## Tests
 
