@@ -40,7 +40,7 @@ A python toolbox for working with the Ursa Platform APIs in ArcGIS Pro.
 
 ## Ordering
 
-Orders will be delivered via email with a link to download the relevant submission
+Orders will be delivered via email with a link to download the relevant orders contents.
 
 ## Invoicing
 
