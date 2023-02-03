@@ -39,6 +39,7 @@ Tools can be opened by double-clicking the item in the toolbox.
 
 ### Login
 - User must provide Ursa Platform credentials using the "Login" tool in order to use the Ursa Platform APIs.
+- Login sessions will last up to 8 hours, after that you will receive an authentication error & you will need to log back in.
 ### Tasking
 - Area of interest only supports point geometries
 - Start Date must be 48 hours from present day/time, _if you have the need for Emergency tasking please contact us_
