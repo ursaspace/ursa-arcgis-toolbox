@@ -22,12 +22,16 @@ A python toolbox for working with the Ursa Platform APIs in ArcGIS Pro.
 
 
 ## Installation
+0) Unzip the compressed folder to your desired location
 
-1. In an ArcGIS Pro Document, open "Catalog"
-2. In Catalog, right-click "Toolboxes" and select "Add Toolbox"
+1) In an ArcGIS Pro Document, open "Catalog"
+
+2) In Catalog, right-click "Toolboxes" and select "Add Toolbox"
 <img width="323" alt="Screenshot 2023-01-30 at 15 16 01" src="https://user-images.githubusercontent.com/123033437/215618434-a2fedc98-8153-42b7-b465-d901af682989.png">
-3. Navigate to "UrsaPlatform.pyt", click "Ok"
-4. Open the added toolbox. Listed are the available tools.
+
+3) Navigate to "UrsaPlatform.pyt" where you unzipped Ursa's Python Toolbox, then click "Ok"
+
+4) Open the added toolbox. Listed are the available tools.
 <img width="323" alt="Screenshot 2023-01-30 at 15 16 21" src="https://user-images.githubusercontent.com/123033437/215618493-349f235f-2d0a-47cb-877e-e78138ab46e4.png">
 
 ## Usage
