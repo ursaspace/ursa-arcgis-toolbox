@@ -1,4 +1,9 @@
-# ursa-arcgispro-toolbox
+# Ursa's ArcGIS Python Toolbox
+
+## Ursa Overview
+Ursa Space maintains robust partnerships with existing and upcoming commercial data providers, and regularly ingests and processes a variety of SAR and non-SAR (i.e. optical, infrared, multi-spectral, and hyperspectral) data. This collection of data partners is referred to as Ursa’s Virtual Constellation.
+
+Ursa Space performs this processing through the development and deployment of the Ursa Platform. The platform contains the data and software services required to ingest data (SAR imagery, optical imagery, external data sources for algorithmic fusion, etc.), run analytics and algorithms on these data to produce results, and provide customer access to related data feeds via API.
 
 ## Project Description
 
