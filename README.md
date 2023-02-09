@@ -22,9 +22,9 @@ A python toolbox for working with the Ursa Platform APIs in ArcGIS Pro.
 
 ## Downloading from GitHub
 
-- "Download ZIP" - Find and select the green "< > Code" button, then select "Download ZIP"
+- Use this link https://github.com/ursaspace/ursa-arcgis-toolbox/archive/refs/heads/main.zip
+- or "Download ZIP" - Find and select the green "< > Code" button, then select "Download ZIP" 
 <img width="1190" alt="download-zip" src="https://user-images.githubusercontent.com/123033437/215618368-4f7bdb8c-8e4a-4069-9794-edc4071e5b00.png">
-- Or you can use this link https://github.com/ursaspace/ursa-arcgis-toolbox/archive/refs/heads/main.zip
 
 ## Installation
 0) Unzip the compressed folder to your desired location
