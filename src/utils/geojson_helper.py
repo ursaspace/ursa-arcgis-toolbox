@@ -10,9 +10,9 @@ def esri_json_to_geojson(esri_json):
 def feature_class_to_geojson(feature_class):
     geojson_path = arcpy.FeaturesToJSON_conversion(
         in_features=feature_class,
-        out_json_file='temp_features',
+        out_json_file="temp_features",
         geoJSON="GEOJSON",
-        outputToWGS84="WGS84"
+        outputToWGS84="WGS84",
     )
 
     with open(str(geojson_path)) as file:
