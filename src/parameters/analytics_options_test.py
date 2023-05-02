@@ -38,6 +38,14 @@ class AnalyticsTestCase(unittest.TestCase):
             },
         )
 
+        self.assertEqual(
+            analytic_options.build_cd_analytic_params(None),
+            {
+                "changeDetectionType": [],
+                "maxImageWindowHrs": 24,
+            },
+        )
+
     def test_check_to_enable_cd_param(self):
         analytic_param = analytic_options.analytics_parameter()
         cd_param = analytic_options.change_detection_parameter()

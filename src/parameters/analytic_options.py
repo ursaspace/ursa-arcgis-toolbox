@@ -63,8 +63,9 @@ def build_workflow_request(labels: List[str]):
 
 
 def build_cd_analytic_params(labels: List[str]):
+    cd_types = [cd_map[label] for label in labels] if labels else []
     return {
-        "changeDetectionType": [cd_map[label] for label in labels],
+        "changeDetectionType": cd_types,
         "maxImageWindowHrs": 24,
     }
 
