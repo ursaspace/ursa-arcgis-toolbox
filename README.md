@@ -63,7 +63,7 @@ Tools can be opened by double-clicking the item in the toolbox.
 - Area of interest only supports point geometries
 - End Date cannot precede start data
 - Determine Analytic Options
-- If Change Detection Analytic selected, determine specific Change Detection Analytic options
+- If Change Detection Analytic selected, determine specific Change Detection type from the Change Detection Analytic options
 
 ## Pricing, Terms & Conditions
 
