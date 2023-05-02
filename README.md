@@ -49,6 +49,7 @@ Tools can be opened by double-clicking the item in the toolbox.
 
 - User must provide Ursa Platform credentials using the "Login" tool in order to use the Ursa Platform APIs.
 - Login sessions will last up to 8 hours, after that you will receive an authentication error & you will need to log back in.
+- If user is not logged in, tools requiring authentication will fail.
 
 ### Tasking
 
