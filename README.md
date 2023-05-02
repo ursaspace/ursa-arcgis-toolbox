@@ -4,7 +4,7 @@
 
 Ursa Space maintains robust partnerships with existing and upcoming commercial data providers, and regularly ingests and processes a variety of SAR and non-SAR (i.e. optical, infrared, multi-spectral, and hyperspectral) data. This collection of data partners is referred to as Ursa’s Virtual Constellation.
 
-Ursa Space performs this processing through the development and deployment of the Ursa Platform. The platform contains the data and software services required to ingest data (SAR imagery, optical imagery, external data sources for algorithmic fusion, etc.), run analytics and algorithms on these data to produce results, and provide customer access to related data feeds via API.
+Ursa Space performs this processing through the development and deployment of the Ursa Platform. The platform contains the data and software services required to ingest data, run analytics and algorithms on these data to produce results, and provide customer access to related data feeds via API.
 
 ## Project Description
 
@@ -49,6 +49,7 @@ Tools can be opened by double-clicking the item in the toolbox.
 
 - User must provide Ursa Platform credentials using the "Login" tool in order to use the Ursa Platform APIs.
 - Login sessions will last up to 8 hours, after that you will receive an authentication error & you will need to log back in.
+- If user is not logged in, tools requiring authentication will fail.
 
 ### Tasking
 
@@ -63,7 +64,7 @@ Tools can be opened by double-clicking the item in the toolbox.
 - Area of interest only supports point geometries
 - End Date cannot precede start data
 - Determine Analytic Options
-- If Change Detection Analytic selected, determine specific Change Detection Analytic options
+- If Change Detection Analytic selected, determine specific Change Detection type from the Change Detection Analytic options
 
 ## Pricing, Terms & Conditions
 
