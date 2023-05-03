@@ -1,12 +1,12 @@
 import unittest
 import arcpy
 import os
+
 from . import geojson_helper
 
 
 class GeojsonHelperTestCase(unittest.TestCase):
-
-    MOCK_POINT_SHP = 'MOCK_POINT.shp'
+    MOCK_POINT_SHP = "MOCK_POINT.shp"
 
     def setUp(self):
         # set arcpy workspace to mock data directory
@@ -34,13 +34,10 @@ class GeojsonHelperTestCase(unittest.TestCase):
                             "coordinates": [
                                 -76.49728323840485,
                                 42.440759898132285,
-                            ]
+                            ],
                         },
-                        "properties": {
-                            "FID": 0,
-                            "name": "test"
-                        }
+                        "properties": {"FID": 0, "name": "test"},
                     }
-                ]
-            }
+                ],
+            },
         )

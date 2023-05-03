@@ -8,7 +8,6 @@ from . import tasking
 
 
 class TaskingTestCase(unittest.TestCase):
-
     tool = tasking.Tasking()
     parameters = []
 
@@ -18,7 +17,7 @@ class TaskingTestCase(unittest.TestCase):
     MOCK_START = datetime.datetime(2023, 1, 1)
     MOCK_END = datetime.datetime(2023, 1, 2)
     MOCK_MODE = "SPOTLIGHT"
-    MOCK_VENDORS = ['ICEYE', "CAPELLA"]
+    MOCK_VENDORS = ["ICEYE", "CAPELLA"]
 
     def setUp(self):
         # set arcpy workspace to mock data directory
@@ -50,8 +49,7 @@ class TaskingTestCase(unittest.TestCase):
 
     def test_tasking_order_from_parameters(self):
         tasking_order = self.tool.tasking_order_from_parameters(
-            self.MOCK_EMAIL,
-            self.parameters
+            self.MOCK_EMAIL, self.parameters
         )
 
         self.assertEqual(
@@ -62,37 +60,40 @@ class TaskingTestCase(unittest.TestCase):
                     "contactEmail": self.MOCK_EMAIL,
                     "requireApproval": True,
                     "type": "tasking-parameters",
-                    "aois": [{
-                        "type": "point",
-                        "latitude_deg": 42.44076,
-                        "longitude_deg": -76.49728,
-                        "radius_km": self.MOCK_BUFFER
-                    }],
-                    "schedule": [{
-                        "type": "range",
-                        "range": {
-                            "min": self.MOCK_START.isoformat(),
-                            "max": self.MOCK_END.isoformat()
+                    "aois": [
+                        {
+                            "type": "point",
+                            "latitude_deg": 42.44076,
+                            "longitude_deg": -76.49728,
+                            "radius_km": self.MOCK_BUFFER,
                         }
-                    }],
-                    "collectionParameters": [{
-                        "type": "sar",
-                        "imagingMode": {
-                            "constraint": self.MOCK_MODE,
-                            "level": "required"
-                        },
-                        "resolutionMeters": {
-                            "constraint": {
-                                "min": 0.5,
-                                "max": 1.5
+                    ],
+                    "schedule": [
+                        {
+                            "type": "range",
+                            "range": {
+                                "min": self.MOCK_START.isoformat(),
+                                "max": self.MOCK_END.isoformat(),
                             },
-                            "level": "required"
-                        },
-                        "vendorPreferences": {
-                            "CAPELLA": "preferred",
-                            "ICEYE": "preferred"
                         }
-                    }]
-                }
-            }
+                    ],
+                    "collectionParameters": [
+                        {
+                            "type": "sar",
+                            "imagingMode": {
+                                "constraint": self.MOCK_MODE,
+                                "level": "required",
+                            },
+                            "resolutionMeters": {
+                                "constraint": {"min": 0.5, "max": 1.5},
+                                "level": "required",
+                            },
+                            "vendorPreferences": {
+                                "CAPELLA": "preferred",
+                                "ICEYE": "preferred",
+                            },
+                        }
+                    ],
+                },
+            },
         )
