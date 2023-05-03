@@ -1,10 +1,13 @@
 import importlib
 
-import tools.login as LoginModule
-from tools.login import Login
+import src.tools.login as LoginModule
+from src.tools.login import Login
 
-import tools.tasking as TaskingModule
-from tools.tasking import Tasking
+import src.tools.tasking as TaskingModule
+from src.tools.tasking import Tasking
+
+import src.tools.analytics as AnalyticsModule
+from src.tools.analytics import Analytics
 
 
 class Toolbox(object):
@@ -17,6 +20,7 @@ class Toolbox(object):
         # trigger reload for hmr development
         importlib.reload(LoginModule)
         importlib.reload(TaskingModule)
+        importlib.reload(AnalyticsModule)
 
         # List of tool classes associated with this toolbox
-        self.tools = [Login, Tasking]
+        self.tools = [Login, Tasking, Analytics]
