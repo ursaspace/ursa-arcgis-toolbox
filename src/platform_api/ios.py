@@ -32,6 +32,7 @@ def build_collection_parameters(imaging_mode, resolution_meters, vendor_preferen
 
 def build_tasking_order(email, aois, schedule, collection_params):
     return build_order(
+        "Tasking",
         {
             "contactEmail": email,
             "requireApproval": True,
@@ -56,11 +57,15 @@ def build_analytics_order(email, aois, schedule, workflow_request, cd_params=Non
     if cd_params is not None:
         req["changeDetAnalyticParams"] = cd_params
 
-    return build_order(req)
+    return build_order("Analytics", req)
 
 
-def build_order(request):
-    return {"customerNotes": "#ESRI-TOOLBOX", "request": request}
+def build_order(order_type, request):
+    return {
+        "descriptiveName": f"ESRI ArcGIS {order_type} Order",
+        "customerNotes": "#ESRI-TOOLBOX",
+        "request": request
+    }
 
 
 def cancel_order(id: str):

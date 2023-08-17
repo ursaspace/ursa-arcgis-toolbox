@@ -67,6 +67,7 @@ class IosTestCase(unittest.TestCase):
                 collection_params=MOCK_COLLECTION_PARAMS,
             ),
             {
+                "descriptiveName": "ESRI ArcGIS Tasking Order",
                 "customerNotes": "#ESRI-TOOLBOX",
                 "request": {
                     "contactEmail": self.MOCK_EMAIL,
@@ -106,6 +107,7 @@ class IosTestCase(unittest.TestCase):
                 cd_params=MOCK_CD_PARAMS,
             ),
             {
+                "descriptiveName": "ESRI ArcGIS Analytics Order",
                 "customerNotes": "#ESRI-TOOLBOX",
                 "request": {
                     "contactEmail": self.MOCK_EMAIL,

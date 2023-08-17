@@ -63,6 +63,7 @@ class AnalyticsTestCase(unittest.TestCase):
         self.assertEqual(
             analytics_order,
             {
+                "descriptiveName": "ESRI ArcGIS Analytics Order",
                 "customerNotes": "#ESRI-TOOLBOX",
                 "request": {
                     "contactEmail": self.MOCK_EMAIL,

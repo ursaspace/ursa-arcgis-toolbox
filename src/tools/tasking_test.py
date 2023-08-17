@@ -55,6 +55,7 @@ class TaskingTestCase(unittest.TestCase):
         self.assertEqual(
             tasking_order,
             {
+                "descriptiveName": "ESRI ArcGIS Tasking Order",
                 "customerNotes": "#ESRI-TOOLBOX",
                 "request": {
                     "contactEmail": self.MOCK_EMAIL,
