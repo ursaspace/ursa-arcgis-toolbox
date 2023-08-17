@@ -5,7 +5,7 @@ import arcpy
 
 from ..utils import jwt_helper
 from ..platform_api import auth_token, ios
-from ..parameters import aoi, analytic_options, schedule
+from ..parameters import aoi, analytic_options, schedule, customer_notes
 
 
 class Analytics(object):
@@ -21,6 +21,7 @@ class Analytics(object):
         importlib.reload(aoi)
         importlib.reload(analytic_options)
         importlib.reload(schedule)
+        importlib.reload(customer_notes)
 
     def getParameterInfo(self):
         """Define parameter definitions"""
@@ -29,6 +30,7 @@ class Analytics(object):
             aoi.buffer_parameter(),
             schedule.start_date_parameter(),
             schedule.end_date_parameter(),
+            customer_notes.customer_notes_parameter(),
             analytic_options.analytics_parameter(),
             analytic_options.change_detection_parameter(),
         ]
@@ -37,7 +39,7 @@ class Analytics(object):
         """Modify the values/properties of parameters before internal
         validation is performed. This method is called whenever a
         parameter has been changed."""
-        analytic_options.check_to_enable_cd_param(parameters[4], parameters[5])
+        analytic_options.check_to_enable_cd_param(parameters[5], parameters[6])
 
     def updateMessages(self, parameters):
         """Modify the messages created by internal validation for each tool
@@ -73,12 +75,14 @@ class Analytics(object):
             start_date=parameters[2].value, end_date=parameters[3].value
         )
 
+        #customer_notes_obj = parameters[4]
+
         workflow_request_obj = analytic_options.build_workflow_request(
-            parameters[4].values
+            parameters[5].values
         )
 
         cd_params_obj = (
-            analytic_options.build_cd_analytic_params(parameters[5].values)
+            analytic_options.build_cd_analytic_params(parameters[6].values)
             if "ChangeDetection" in workflow_request_obj["analytics"]
             else None
         )
@@ -89,6 +93,7 @@ class Analytics(object):
             schedule=schedule_obj,
             workflow_request=workflow_request_obj,
             cd_params=cd_params_obj,
+            #customer_notes=customer_notes_obj,
         )
 
         return ios_order
