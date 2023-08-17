@@ -43,7 +43,7 @@ def build_tasking_order(email, aois, schedule, collection_params):
     )
 
 
-def build_analytics_order(email, aois, schedule, workflow_request, cd_params=None):
+def build_analytics_order(email, aois, schedule, workflow_request, cd_params=None, customer_notes=None):
     req = {
         "contactEmail": email,
         "requireApproval": True,
@@ -56,11 +56,15 @@ def build_analytics_order(email, aois, schedule, workflow_request, cd_params=Non
     if cd_params is not None:
         req["changeDetAnalyticParams"] = cd_params
 
-    return build_order(req)
+    return build_order(req, customer_notes)
 
 
-def build_order(request):
-    return {"customerNotes": "#ESRI-TOOLBOX", "request": request}
+def build_order(request, customer_notes=None):
+    if customer_notes:
+        notes_string = f"#ESRI-TOOLBOX - {customer_notes}"
+        return {"customerNotes": "#ESRI-TOOLBOX", "request": request}
+    else:
+        return {"customerNotes": "#ESRI-TOOLBOX", "request": request}
 
 
 def cancel_order(id: str):
