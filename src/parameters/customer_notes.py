@@ -9,9 +9,3 @@ def customer_notes_parameter():
         direction="Input")
 
     return param
-
-def validate_customer_notes_parameter():
-    pass
-
-def build_customer_notes():
-    pass
