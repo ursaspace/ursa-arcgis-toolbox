@@ -75,7 +75,7 @@ class Analytics(object):
             start_date=parameters[2].value, end_date=parameters[3].value
         )
 
-        #customer_notes_obj = parameters[4]
+        customer_notes_obj = parameters[4].value
 
         workflow_request_obj = analytic_options.build_workflow_request(
             parameters[5].values
@@ -93,7 +93,7 @@ class Analytics(object):
             schedule=schedule_obj,
             workflow_request=workflow_request_obj,
             cd_params=cd_params_obj,
-            #customer_notes=customer_notes_obj,
+            customer_notes=customer_notes_obj,
         )
 
         return ios_order
