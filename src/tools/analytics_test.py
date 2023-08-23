@@ -65,7 +65,7 @@ class AnalyticsTestCase(unittest.TestCase):
         self.assertEqual(
             analytics_order,
             {
-                "customerNotes": "#ESRI-TOOLBOX - Test Note",
+                "customerNotes": "Test Note",
                 "request": {
                     "contactEmail": self.MOCK_EMAIL,
                     "requireApproval": True,

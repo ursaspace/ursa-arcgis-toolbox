@@ -67,7 +67,6 @@ class IosTestCase(unittest.TestCase):
                 collection_params=MOCK_COLLECTION_PARAMS,
             ),
             {
-                "customerNotes": "#ESRI-TOOLBOX",
                 "request": {
                     "contactEmail": self.MOCK_EMAIL,
                     "requireApproval": True,
@@ -106,7 +105,6 @@ class IosTestCase(unittest.TestCase):
                 cd_params=MOCK_CD_PARAMS,
             ),
             {
-                "customerNotes": "#ESRI-TOOLBOX",
                 "request": {
                     "contactEmail": self.MOCK_EMAIL,
                     "requireApproval": True,

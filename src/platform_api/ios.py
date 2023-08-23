@@ -61,10 +61,9 @@ def build_analytics_order(email, aois, schedule, workflow_request, cd_params=Non
 
 def build_order(request, customer_notes=None):
     if customer_notes:
-        notes_string = f"#ESRI-TOOLBOX - {customer_notes}"
-        return {"customerNotes": notes_string, "request": request}
+        return {"customerNotes": customer_notes, "request": request}
     else:
-        return {"customerNotes": "#ESRI-TOOLBOX", "request": request}
+        return {"request": request}
 
 
 def cancel_order(id: str):
