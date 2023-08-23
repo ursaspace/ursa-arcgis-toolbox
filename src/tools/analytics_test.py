@@ -66,7 +66,7 @@ class AnalyticsTestCase(unittest.TestCase):
             analytics_order,
             {
                 "descriptiveName": "ESRI ArcGIS Analytics Order",
-                "customerNotes": "#ESRI-TOOLBOX - Test Note",
+                "customerNotes": "Test Note",
                 "request": {
                     "contactEmail": self.MOCK_EMAIL,
                     "requireApproval": True,

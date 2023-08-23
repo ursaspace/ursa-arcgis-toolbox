@@ -68,7 +68,6 @@ class IosTestCase(unittest.TestCase):
             ),
             {
                 "descriptiveName": "ESRI ArcGIS Tasking Order",
-                "customerNotes": "#ESRI-TOOLBOX",
                 "request": {
                     "contactEmail": self.MOCK_EMAIL,
                     "requireApproval": True,
@@ -108,7 +107,6 @@ class IosTestCase(unittest.TestCase):
             ),
             {
                 "descriptiveName": "ESRI ArcGIS Analytics Order",
-                "customerNotes": "#ESRI-TOOLBOX",
                 "request": {
                     "contactEmail": self.MOCK_EMAIL,
                     "requireApproval": True,
