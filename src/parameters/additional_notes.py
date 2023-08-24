@@ -1,9 +1,10 @@
 import arcpy
 
-def customer_notes_parameter():
+
+def additional_notes_parameter():
     param = arcpy.Parameter(
-        displayName="Customer Notes",
-        name="customer_notes",
+        displayName="Additional Notes",
+        name="additional_notes",
         datatype="GPString",
         parameterType="Optional",
         direction="Input")

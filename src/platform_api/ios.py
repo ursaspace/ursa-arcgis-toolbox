@@ -43,7 +43,7 @@ def build_tasking_order(email, aois, schedule, collection_params):
     )
 
 
-def build_analytics_order(email, aois, schedule, workflow_request, cd_params=None, customer_notes=None):
+def build_analytics_order(email, aois, schedule, workflow_request, cd_params=None, additional_notes=None):
     req = {
         "contactEmail": email,
         "requireApproval": True,
@@ -56,12 +56,12 @@ def build_analytics_order(email, aois, schedule, workflow_request, cd_params=Non
     if cd_params is not None:
         req["changeDetAnalyticParams"] = cd_params
 
-    return build_order(req, customer_notes)
+    return build_order(req, additional_notes)
 
 
-def build_order(request, customer_notes=None):
-    if customer_notes:
-        return {"customerNotes": customer_notes, "request": request}
+def build_order(request, additional_notes=None):
+    if additional_notes:
+        return {"customerNotes": additional_notes, "request": request}
     else:
         return {"request": request}
 
