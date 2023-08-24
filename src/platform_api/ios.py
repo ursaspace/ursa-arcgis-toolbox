@@ -44,7 +44,7 @@ def build_tasking_order(email, aois, schedule, collection_params):
     )
 
 
-def build_analytics_order(email, aois, schedule, workflow_request, cd_params=None, customer_notes=None):
+def build_analytics_order(email, aois, schedule, workflow_request, cd_params=None, additional_notes=None):
     req = {
         "contactEmail": email,
         "requireApproval": True,
@@ -60,10 +60,10 @@ def build_analytics_order(email, aois, schedule, workflow_request, cd_params=Non
     return build_order("Analytics", req)
 
 
-def build_order(order_type, request, customer_notes=None):
-    if customer_notes:
+def build_order(order_type, request, additional_notes=None):
+    if additional_notes:
         return {"descriptiveName": f"ESRI ArcGIS {order_type} Order",
-                "customerNotes": customer_notes,
+                "customerNotes": additional_notes,
                 "request": request}
     else:
         return {"descriptiveName": f"ESRI ArcGIS {order_type} Order",
