@@ -76,6 +76,8 @@ class Analytics(object):
         )
 
         additional_notes_obj = parameters[4].value
+        if additional_notes.is_note_only_spaces(additional_notes_obj):
+            additional_notes_obj = None
 
         workflow_request_obj = analytic_options.build_workflow_request(
             parameters[5].values
