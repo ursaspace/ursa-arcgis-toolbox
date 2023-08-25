@@ -57,7 +57,7 @@ def build_analytics_order(email, aois, schedule, workflow_request, cd_params=Non
     if cd_params is not None:
         req["changeDetAnalyticParams"] = cd_params
 
-    return build_order("Analytics", req)
+    return build_order("Analytics", req, additional_notes)
 
 
 def build_order(order_type, request, additional_notes=None):
