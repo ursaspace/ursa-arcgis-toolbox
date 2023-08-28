@@ -16,6 +16,7 @@ class AnalyticsTestCase(unittest.TestCase):
     MOCK_BUFFER = 3.0
     MOCK_START = datetime.datetime(2023, 1, 1)
     MOCK_END = datetime.datetime(2023, 1, 2)
+    MOCK_ADDITIONAL_NOTE = "Test Note"
     MOCK_ANALYTIC_OPTIONS = [
         "Change Detection",
         "Small Vessel Detection",
@@ -52,8 +53,9 @@ class AnalyticsTestCase(unittest.TestCase):
         self.parameters[1].value = self.MOCK_BUFFER
         self.parameters[2].value = self.MOCK_START
         self.parameters[3].value = self.MOCK_END
-        self.parameters[4].value = self.MOCK_ANALYTIC_OPTIONS
-        self.parameters[5].value = self.MOCK_CD_OPTIONS
+        self.parameters[4].value = self.MOCK_ADDITIONAL_NOTE
+        self.parameters[5].value = self.MOCK_ANALYTIC_OPTIONS
+        self.parameters[6].value = self.MOCK_CD_OPTIONS
 
     def test_analytics_order_from_parameters(self):
         analytics_order = self.tool.analytics_order_from_parameters(
@@ -64,7 +66,7 @@ class AnalyticsTestCase(unittest.TestCase):
             analytics_order,
             {
                 "descriptiveName": "ESRI ArcGIS Analytics Order",
-                "customerNotes": "#ESRI-TOOLBOX",
+                "customerNotes": "Test Note",
                 "request": {
                     "contactEmail": self.MOCK_EMAIL,
                     "requireApproval": True,

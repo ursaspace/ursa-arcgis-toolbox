@@ -1,1 +1,8 @@
 __pycache__/
+
+# Ignore IDE related metadata directories
+.vscode/
+.idea/
+
+# Ignore PyCharm Virtual Enviroment
+venv/

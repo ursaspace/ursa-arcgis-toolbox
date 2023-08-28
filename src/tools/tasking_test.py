@@ -56,7 +56,6 @@ class TaskingTestCase(unittest.TestCase):
             tasking_order,
             {
                 "descriptiveName": "ESRI ArcGIS Tasking Order",
-                "customerNotes": "#ESRI-TOOLBOX",
                 "request": {
                     "contactEmail": self.MOCK_EMAIL,
                     "requireApproval": True,
