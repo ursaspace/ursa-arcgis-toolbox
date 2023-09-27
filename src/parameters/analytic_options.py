@@ -7,7 +7,6 @@ analytic_map: dict[str, str] = {
     "Large Vessel Detection": "LargeVesselDetection",
     "Aircraft Detection": "AircraftDetection",
     "Ground Vehicle Detection": "GroundVehicleDetection",
-    "Car Counting": "CarCounting",
     "Change Detection": "ChangeDetection",
     "Subsidence Monitoring": "SubsidenceMonitoring",
     "Object Detection (SPEX)": "SPEX",
@@ -15,13 +14,9 @@ analytic_map: dict[str, str] = {
 
 # frontend label to backend enum mapping
 cd_map: dict[str, str] = {
-    "Basic Change Detection": "CHANGE_DETECTION",
-    "Object Level Change Detection": "OBJECT_LEVEL",
-    "Port Traffic": "PORT_TRAFFIC",
-    "Parking Lot": "PARKING_LOT",
-    "Construction": "CONSTRUCTION",
-    "Hurricane Damage": "HURRICANE_DAMAGE",
-    "Large Earth": "LARGE_EARTH",
+    "Small Objects": "SMALL_OBJECTS",
+    "Medium Structures": "Medium Structures",
+    "Large Areas": "LARGE_AREAS",
 }
 
 

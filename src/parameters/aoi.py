@@ -19,7 +19,7 @@ def validate_aoi_parameter(parameter):
     if parameter.value is not None:
         if aoi_has_features(parameter.value) == False:
             parameter.setErrorMessage(
-                "AOI must contain features. After adding features, clear AOI parameter and re-select layer."
+                "AOI must contain features. If the feature layer was newly created and contains a valid geometry, this Geoprocessing Form needs to be refreshed in order to register the new geometry."
             )
 
 
