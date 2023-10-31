@@ -8,7 +8,7 @@ analytic_map: dict[str, str] = {
     "Aircraft Detection": "AircraftDetection",
     "Ground Vehicle Detection": "GroundVehicleDetection",
     "Change Detection": "ChangeDetection",
-    "Subsidence Monitoring": "SubsidenceMonitoring",
+    "Ground Displacement": "GroundDisplacement",
     "Object Detection (SPEX)": "SPEX",
 }
 
