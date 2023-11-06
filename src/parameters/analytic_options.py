@@ -15,7 +15,7 @@ analytic_map: dict[str, str] = {
 # frontend label to backend enum mapping
 cd_map: dict[str, str] = {
     "Small Objects": "SMALL_OBJECTS",
-    "Medium Structures": "Medium Structures",
+    "Medium Structures": "MEDIUM_STRUCTURES",
     "Large Areas": "LARGE_AREAS",
 }
 
